@@ -10,7 +10,7 @@ function blockRequestIfContainsReelId(details) {
 		try {
 			const variables = JSON.parse(variablesString);
 			if (variables.reelId !== undefined) {
-				return { cancel: true };
+				return { cancel: isActive };
 			};
 		} catch (error) {
 			console.log("Error parsing variablesString");
